@@ -1,9 +1,10 @@
 import "./NavbarStyle.css"
-
+import resumePDF from '../assets/Resume.pdf';
 
 import React, { useState } from 'react'
-import {FaBars, FaTimes} from "react-icons/fa"
+import {FaBars, FaDownload, FaTimes} from "react-icons/fa"
 import { Link } from 'react-router-dom'
+
 
 const Navbar = () => {
 
@@ -23,6 +24,21 @@ const Navbar = () => {
 
     window.addEventListener("scroll",changeColor)
 
+
+   
+    const downloadResume=()=> {
+          fetch(resumePDF)
+            .then((response) => response.blob())
+            .then((blob) => {
+              const url = URL.createObjectURL(blob);
+              const a = document.createElement('a');
+              a.href = url;
+              a.download = 'resume.pdf';
+              a.click();
+              URL.revokeObjectURL(url);
+            });
+        }
+
   return (
     <div className={color ? "header header-bg":"header"}>
     
@@ -41,6 +57,9 @@ const Navbar = () => {
             </li>
             <li>
                 <Link to="/contact">Contact</Link>
+            </li>
+            <li>
+                <Link onClick={downloadResume}><FaDownload style={{color:"Blue", marginRight:"5px"}}/>Resume</Link>
             </li>
         </ul>
         <div className='hamburger' onClick={handleOnClick}>
