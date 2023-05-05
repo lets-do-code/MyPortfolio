@@ -40,6 +40,13 @@
     
 }
 
+
+.project-detail{
+    position: relative;
+    bottom: 0;
+}
+
+
 @media screen and (max-width:740px) {
     .project-container{
         max-width: 90%;

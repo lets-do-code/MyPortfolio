@@ -1,8 +1,10 @@
 import Proj1 from "../assets/Student-Management-System.jpg"
 import Proj2 from "../assets/speech-emotion-recognition.jpg"
 import Proj3 from "../assets/Portfolio.jpg"
+import Proj4 from "../assets/diaster.jpg"
 
 const ProjectCardData = [
+
     {
         projImg:Proj1 ,
         projTitle:"Student Management",
@@ -27,6 +29,13 @@ const ProjectCardData = [
         source:"https://github.com/lets-do-code/speech-emotion-recognition-software-"
     },
     
+    {
+        projImg:Proj4 ,
+        projTitle:"Diaster Monitoring (UpComming...)",
+        projDetail:"This app provides real-time updates and alerts on potential disasters and their impact on affected areas.The app uses an interactive map to display the location of available resources, such as food and water, for those affected by the disaster.",
+        view:"https://github.com/lets-do-code/speech-emotion-recognition-software-",
+        source:"https://github.com/lets-do-code/speech-emotion-recognition-software-"
+    }
 ];
 
 export default ProjectCardData;
