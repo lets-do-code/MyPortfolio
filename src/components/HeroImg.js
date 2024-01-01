@@ -17,7 +17,7 @@ const HeroImg = () => {
         <p>I'M A FREELANCER</p>
         <h1 style={{color:" #f8d912", whiteSpace:"nowrap"}}>
         <Typewriter
-            words={['React Developer', 'Web Developer','FullStack Developer']}
+            words={['React Native Developer','Android Developer','Web Developer','FullStack Developer']}
             loop={5}
             cursor
             cursorStyle='_'
